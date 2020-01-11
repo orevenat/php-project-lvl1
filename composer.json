@@ -1,0 +1,11 @@
+{
+    "name": "orevenat/php-project-lvl1",
+    "description": "Brain Games",
+    "authors": [
+        {
+            "name": "Ruslan Knyazev",
+            "email": "agrry@yandex.ru"
+        }
+    ],
+    "require": {}
+}
