@@ -1,15 +1,16 @@
 {
     "name": "orevenat/php-project-lvl1",
-    "version": "0.0.1",
-    "description": "Brain Games",
+    "bin": [
+        "bin/brain-games"
+    ],
+    "type": "library",
     "authors": [
         {
             "name": "Ruslan Knyazev",
             "email": "agrry@yandex.ru"
         }
     ],
-    "bin": [
-        "bin/brain-games"
-    ],
+    "description": "Brain Games",
+    "license": "MIT",
     "require": {}
 }
