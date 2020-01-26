@@ -9,8 +9,12 @@
 
 ### brain-even
 
-[![asciicast](https://asciinema.org/a/294118.svg)](https://asciinema.org/a/294118)
+[![asciicast](https://asciinema.org/a/296071.svg)](https://asciinema.org/a/296071)
 
 ### brain-calc
 
-[![asciicast](https://asciinema.org/a/296051.svg)](https://asciinema.org/a/296051)
+[![asciicast](https://asciinema.org/a/296072.svg)](https://asciinema.org/a/296072)
+
+### brain-gcd
+
+[![asciicast](https://asciinema.org/a/296070.svg)](https://asciinema.org/a/296070)
