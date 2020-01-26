@@ -20,6 +20,7 @@
         "files": [
             "src/games/Calc.php",
             "src/games/Even.php",
+            "src/games/Gcd.php",
             "src/Cli.php"
         ]
     },

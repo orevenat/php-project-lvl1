@@ -13,6 +13,10 @@ const GAMES_LIST = [
     'brain-even' => [
         'rules' => 'Answer "yes" if the number is even, otherwise answer "no"',
         'engine' => 'BrainGames\games\Even\play'
+    ],
+    'brain-gcd' => [
+        'rules' => 'Find the greatest common divisor of given numbers.',
+        'engine' => 'BrainGames\games\Gcd\play'
     ]
 ];
 
