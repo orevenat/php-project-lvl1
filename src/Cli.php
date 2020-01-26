@@ -5,31 +5,38 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function run()
+const GAMES_LIST = [
+    'brain-calc' => [
+        'rules' => 'What is the result of the expression?',
+        'engine' => 'BrainGames\games\Calc\play'
+    ],
+    'brain-even' => [
+        'rules' => 'Answer "yes" if the number is even, otherwise answer "no"',
+        'engine' => 'BrainGames\games\Even\play'
+    ]
+];
+
+function run(string $gameName, int $roundCount = 3)
 {
+    $game = GAMES_LIST[$gameName];
+
     line('Welcome to the Brain Games!');
-    line('Answer "yes" if the number is even, otherwise answer "no"' . PHP_EOL);
+    line($game['rules'] . PHP_EOL);
     $name = prompt('May I have your name?');
     line("Hello, %s!" . PHP_EOL, $name);
 
-    for ($i = 1; $i <= 3; $i++) {
-        $number = rand(1, 99);
-        $message = "Question: {$number}";
-        $answer = prompt($message);
-        $realAnswer = isEven($number) ? 'yes' : 'no';
-        if ($answer === $realAnswer) {
+    for ($i = 1; $i <= $roundCount; $i++) {
+        [$message, $correctAnswer] = call_user_func($game['engine']);
+
+        $userAnswer = prompt($message);
+        if ($userAnswer === $correctAnswer) {
             line("Correct!");
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $realAnswer);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $correctAnswer);
             line("Let's try again, %s!", $name);
             return;
         }
     }
 
     line('Congratulations, %s!', $name);
-}
-
-function isEven(int $number)
-{
-    return $number % 2 === 0;
 }

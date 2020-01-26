@@ -1,6 +1,7 @@
 {
     "name": "orevenat/php-project-lvl1",
     "bin": [
+        "bin/brain-calc",
         "bin/brain-even"
     ],
     "type": "library",
@@ -16,7 +17,11 @@
         "phpcs": "phpcs"
     },
     "autoload": {
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/games/Calc.php",
+            "src/games/Even.php",
+            "src/Cli.php"
+        ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
