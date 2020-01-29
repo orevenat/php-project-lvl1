@@ -15,6 +15,7 @@
         }
     ],
     "description": "Brain Games",
+    "keywords": ["brain games"],
     "license": "MIT",
     "scripts": {
         "phpcs": "phpcs"
