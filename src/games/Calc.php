@@ -8,19 +8,20 @@ function play()
     $number2 = rand(1, 10);
     $operations = ['+', '-', '*'];
     $operation = $operations[array_rand($operations)];
-    $message = "{$number1} {$operation} {$number2}";
-    $result = 0;
+    $question = "{$number1} {$operation} {$number2}";
+    $questionMessage = "Question: {$question}";
+    $correctAnswer = 0;
     switch ($operation) {
         case '+':
-            $result = $number1 + $number2;
+            $correctAnswer = $number1 + $number2;
             break;
         case '-':
-            $result = $number1 - $number2;
+            $correctAnswer = $number1 - $number2;
             break;
         case '*':
-            $result = $number1 * $number2;
+            $correctAnswer = $number1 * $number2;
             break;
     }
 
-    return [$message, (string) $result];
+    return [$questionMessage, (string) $correctAnswer];
 }

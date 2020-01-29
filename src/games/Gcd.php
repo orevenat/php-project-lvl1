@@ -6,10 +6,11 @@ function play()
 {
     $number1 = rand(1, 100);
     $number2 = rand(1, 100);
-    $message = "Question: {$number1} {$number2}";
+    $question = "{$number1} {$number2}";
+    $questionMessage = "Question: {$question}";
     $correctAnswer = (string) gcd($number1, $number2);
 
-    return [$message, $correctAnswer];
+    return [$questionMessage, $correctAnswer];
 }
 
 function gcd(int $num1, int $num2)

@@ -17,6 +17,10 @@ const GAMES_LIST = [
     'brain-gcd' => [
         'rules' => 'Find the greatest common divisor of given numbers.',
         'engine' => 'BrainGames\games\Gcd\play'
+    ],
+    'brain-progression' => [
+        'rules' => 'What number is missing in the progression?',
+        'engine' => 'BrainGames\games\Progression\play'
     ]
 ];
 

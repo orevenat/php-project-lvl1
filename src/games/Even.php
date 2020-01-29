@@ -4,11 +4,11 @@ namespace BrainGames\games\Even;
 
 function play()
 {
-    $number = rand(1, 99);
-    $message = "Question: {$number}";
-    $correctAnswer = isEven($number) ? 'yes' : 'no';
+    $question = rand(1, 99);
+    $questionMessage = "Question: {$question}";
+    $correctAnswer = isEven($question) ? 'yes' : 'no';
 
-    return [$message, $correctAnswer];
+    return [$questionMessage, $correctAnswer];
 }
 
 function isEven(int $number)
