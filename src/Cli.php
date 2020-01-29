@@ -18,6 +18,10 @@ const GAMES_LIST = [
         'rules' => 'Find the greatest common divisor of given numbers.',
         'engine' => 'BrainGames\games\Gcd\play'
     ],
+    'brain-prime' => [
+        'rules' => 'Answer "yes" if given number is prime. Otherwise answer "no".',
+        'engine' => 'BrainGames\games\Prime\play'
+    ],
     'brain-progression' => [
         'rules' => 'What number is missing in the progression?',
         'engine' => 'BrainGames\games\Progression\play'
