@@ -2,13 +2,20 @@
 
 namespace BrainGames\games\Prime;
 
+use function BrainGames\Engine\run;
+
+const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function play()
 {
-    $question = rand(1, 100);
-    $questionMessage = "Question: {$question}";
-    $correctAnswer = isPrime($question) ? 'yes' : 'no';
+    $game = function () {
+        $question = rand(1, 100);
+        $correctAnswer = isPrime($question) ? 'yes' : 'no';
 
-    return [$questionMessage, $correctAnswer];
+        return [$question, $correctAnswer];
+    };
+
+    run(RULES, $game);
 }
 
 function isPrime(int $number)
@@ -17,7 +24,7 @@ function isPrime(int $number)
         return false;
     }
 
-    for ($i = 2; $i < $number; $i += 1) {
+    for ($i = 2; $i <= $number / 2; $i += 1) {
         if ($number % $i === 0) {
             return false;
         }

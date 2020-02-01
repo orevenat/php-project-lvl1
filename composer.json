@@ -7,7 +7,7 @@
         "bin/brain-prime",
         "bin/brain-progression"
     ],
-    "type": "library",
+    "type": "project",
     "authors": [
         {
             "name": "Ruslan Knyazev",
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "files": [
+            "src/Engine.php",
             "src/games/Calc.php",
             "src/games/Even.php",
             "src/games/Gcd.php",
             "src/games/Prime.php",
-            "src/games/Progression.php",
-            "src/Cli.php"
+            "src/games/Progression.php"
         ]
     },
     "require": {

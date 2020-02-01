@@ -2,16 +2,24 @@
 
 namespace BrainGames\games\Progression;
 
+use function BrainGames\Engine\run;
+
+const RULES = 'What number is missing in the progression?';
+
 function play()
 {
-    $randomPosition = rand(1, 10);
-    $progression = makeProgression();
-    $questionArr = array_replace($progression, [$randomPosition => '..']);
-    $question = implode(' ', $questionArr);
-    $questionMessage = "Question: {$question}";
-    $correctAnswer = (string) $progression[$randomPosition];
+    $game = function () {
+        $randomPosition = rand(1, 10);
+        $progression = makeProgression();
+        $questionArr = array_replace($progression, [$randomPosition => '..']);
+        $question = implode(' ', $questionArr);
+        $correctAnswer = (string) $progression[$randomPosition];
 
-    return [$questionMessage, $correctAnswer];
+        return [$question, $correctAnswer];
+    };
+
+
+    run(RULES, $game);
 }
 
 function makeProgression($size = 10)
