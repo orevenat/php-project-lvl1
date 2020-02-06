@@ -4,18 +4,18 @@ namespace BrainGames\games\Even;
 
 use function BrainGames\Engine\run;
 
-const RULES = 'Answer "yes" if the number is even, otherwise answer "no"';
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 function play()
 {
-    $game = function () {
+    $runGame = function () {
         $question = rand(1, 99);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
 
         return [$question, $correctAnswer];
     };
 
-    run(RULES, $game);
+    run(DESCRIPTION, $runGame);
 }
 
 function isEven(int $number)

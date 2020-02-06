@@ -4,18 +4,18 @@ namespace BrainGames\games\Prime;
 
 use function BrainGames\Engine\run;
 
-const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function play()
 {
-    $game = function () {
+    $runGame = function () {
         $question = rand(1, 100);
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
 
         return [$question, $correctAnswer];
     };
 
-    run(RULES, $game);
+    run(DESCRIPTION, $runGame);
 }
 
 function isPrime(int $number)
